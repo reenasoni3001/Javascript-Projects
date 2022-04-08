@@ -16,8 +16,16 @@ code {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  gap: 15px;
+
+  flex-direction: column;
 }
+
+.displayValues {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
 .btn {
   padding: 5px 15px;
   font-size: 1.2em;

@@ -3,25 +3,37 @@ import "./App.css";
 import Header from "./components/Header";
 
 function App() {
-  const valuePlus = () => {
-    setValue(value + 1);
+  const increment = () => {
+    setCount(count + parseInt(extra));
   };
-  const valueMinus = () => {
-    setValue(value - 1);
+  const decrement = () => {
+    setCount(count - extra);
   };
-  const [value, setValue] = useState(0);
+
+  const [count, setCount] = useState(0);
+  const [extra, setExtra] = useState(0);
 
   return (
     <div>
       <div className="container">
-        <button className="btn btn-plus" onClick={valuePlus}>
-          +
-        </button>
-        <h1>{value}</h1>
+        <input
+          type="number"
+          value={extra}
+          onChange={(e) => {
+            setExtra(e.target.value);
+          }}
+          className="input"
+        />
+        <div className="displayValues">
+          <button className="btn btn-plus" onClick={increment}>
+            +
+          </button>
+          <h1>{count}</h1>
 
-        <button className="btn btn-minus" onClick={valueMinus}>
-          -
-        </button>
+          <button className="btn btn-minus" onClick={decrement}>
+            -
+          </button>
+        </div>
       </div>
     </div>
   );
