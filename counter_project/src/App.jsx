@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 
@@ -13,8 +13,14 @@ function App() {
   const [count, setCount] = useState(0);
   const [extra, setExtra] = useState(0);
 
+  useEffect(() => {
+    //to call specific resource type ${}
+    document.title = `Counter(${count})`;
+  });
+
   return (
     <div>
+      <title>{count}</title>
       <div className="container">
         <input
           type="number"
