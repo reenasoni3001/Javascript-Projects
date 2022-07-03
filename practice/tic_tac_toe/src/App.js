@@ -13,6 +13,7 @@ function App() {
     const newBoard = JSON.parse(JSON.stringify(board));
 
     if (newBoard[rowIndex][columnIndex]) {
+      //this is for testing purpose
       return;
     }
     const play = player ? "X" : "O";
