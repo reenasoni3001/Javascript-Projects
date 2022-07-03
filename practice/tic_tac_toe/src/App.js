@@ -10,7 +10,7 @@ function App() {
   );
 
   function handlePlayerClick(rowIndex, columnIndex) {
-    const newBoard = JSON.parse(JSON.stringify(board));
+    const newBoard = JSON.parse(JSON.stringify(board)); // test comment
 
     if (newBoard[rowIndex][columnIndex]) {
       //this is for testing purpose
